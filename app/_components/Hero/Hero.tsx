@@ -47,10 +47,9 @@ const Hero = () => {
               </div>
             </div>
             <div className="lg:w-1/2 flex items-center">
-              <Image
+              <img
                 width={500}
                 height={400}
-                // loading="lazy"
                 src={"/images/hero-section.jpg"}
                 alt="Stylish couple wearing fashionable clothes"
                 className="w-full h-auto object-cover"
