@@ -5,7 +5,7 @@ import { cookies } from 'next/headers';
 
 let url = process.env.NEXT_PUBLIC_DB
 
-export async function getCart(route:string) {
+export async function getData(route:string) {
   let token = (await cookies()).get('tk-user')?.value
 
   try {

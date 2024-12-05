@@ -2,11 +2,11 @@ import { Search, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import LeftLinks from "./LeftLinks";
-import { getCart } from "@/app/_actions/getData";
+import { getData } from "@/app/_actions/getData";
 
 const Nav = async () => {
-  const getCartData = await getCart('cart');
-  console.log("🚀 ~ Nav ~ getCartData:", getCartData);
+  const getCartData = await getData('cart');
+  console.log("🚀 ~ Nav ~ getCartData:", getCartData)
   return (
     <>
       <nav className="bg-white shadow font-inter fixed top-0 left-0 right-0 z-50">
