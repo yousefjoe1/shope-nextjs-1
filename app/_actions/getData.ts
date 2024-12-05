@@ -8,6 +8,10 @@ let url = process.env.NEXT_PUBLIC_DB
 export async function getData(route:string) {
   let token = (await cookies()).get('tk-user')?.value
 
+//   if(!token){
+//     return {code: 404, msg: 'Token required', stauts: "error"}
+//   }
+
   try {
     const response = await axios.get(`${url}/api/${route}`,{
         headers: {

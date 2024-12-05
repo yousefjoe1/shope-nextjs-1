@@ -1,12 +1,16 @@
-import { Search, ShoppingCart } from "lucide-react";
+import { LogIn, Search, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import LeftLinks from "./LeftLinks";
 import { getData } from "@/app/_actions/getData";
+import Profile from "@/app/_components/Profile";
+import { isAuth } from "@/app/_actions/isAuth";
 
 const Nav = async () => {
-  const getCartData = await getData('cart');
-  console.log("🚀 ~ Nav ~ getCartData:", getCartData)
+  const getCartData = await getData("cart");
+  const isauth = await isAuth();
+  console.log("🚀 ~ Nav ~ isauth:", isauth);
+  console.log("🚀 ~ Nav ~ getCartData:", getCartData);
   return (
     <>
       <nav className="bg-white shadow font-inter fixed top-0 left-0 right-0 z-50">
@@ -51,7 +55,13 @@ const Nav = async () => {
                   )}
                 </span>
               </Link>
-              {/* <ProfileMenu /> */}
+              {isauth?.code == 404 ? (
+                <Link href={"/login"} className="flex justify-center items-center p-1 w-8 h-8 rounded-full border-2">
+                  <LogIn className="h-6 w-6 text-gray-600"/>
+                </Link>
+              ) : (
+                <Profile />
+              )}
             </div>
           </div>
         </div>

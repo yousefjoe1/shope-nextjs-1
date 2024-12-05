@@ -6,12 +6,13 @@ import ProductsSection from "./_components/Products/ProductsSection";
 export default function Home() {
 
   return (
-    <div className="">
+    <section className="">
       <AosAnimations />
         <Hero />
 
         <ProductsSection title='New Arrival' link="new-arrival" api="products?extraQuery=new-arrivals&count=4"/>
+        <ProductsSection title='Most Viewd' link="most-viewd" api="products?count=4"/>
 
-    </div>
+    </section>
   );
 }

@@ -1,17 +1,19 @@
 import { ProductItem } from '@/app/_types/Products'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 const ProductCard = ({prod}: {prod:ProductItem}) => {
   return (
     <Link
+        title={prod.name}
         href={`/product/${prod._id}`}
         data-aos="fade-left"
         data-aos-duration="2000"
-        className="lg:max-w-[295px] shadow-md rounded-2xl overflow-hidden hover:bg-gray-300/55"
+        className="lg:max-w-[295px] shadow-md rounded-2xl overflow-hidden bg-gray-300/50 hover:bg-gray-300/55"
       >
         <div className="block h-64 overflow-hidden">
-          <img
+          <Image
             width={200}
             height={300}
             loading="lazy"
