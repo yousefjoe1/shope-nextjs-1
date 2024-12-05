@@ -26,7 +26,7 @@ const Hero = () => {
               <div className="flex flex-wrap justify-between mt-12">
                 <div className="flex items-center justify-center sm:justify-start w-[calc(50%-0.5rem)] sm:w-auto">
                   <div className="text-center sm:text-left">
-                    <h3 className="text-3xl font-bold">200+</h3>
+                    <h2 className="text-3xl font-bold">200+</h2>
                     <p className="text-gray-600">International Brands</p>
                   </div>
                   <div className="w-px h-12 bg-gray-300 mx-4"></div>
