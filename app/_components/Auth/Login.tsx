@@ -2,7 +2,7 @@
 import { login } from "@/app/_actions/login";
 import { Inputs } from "@/app/_types/User";
 import { Chip, Spinner } from "@nextui-org/react";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
