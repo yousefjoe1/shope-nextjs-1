@@ -24,7 +24,7 @@ const Register = () => {
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
 
-    let userdata = {
+    const userdata = {
       username: data.username,
       email: data.email,
       password: data.password,
@@ -32,7 +32,7 @@ const Register = () => {
     };
     setIsSubmit(true);
     try {
-        let resp = await registerUser(userdata);
+        const resp = await registerUser(userdata);
         console.log("🚀 ~ constonSubmit:SubmitHandler<Inputs>= ~ resp:", resp)
         if(resp.code == 201){
             if(resp.data.role == 'user'){

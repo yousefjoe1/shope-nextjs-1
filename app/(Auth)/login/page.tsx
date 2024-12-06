@@ -6,7 +6,7 @@ import { Button } from "@nextui-org/button";
 import {  LogIn } from "lucide-react";
 import { useState } from "react";
 
-const page = () => {
+const Page = () => {
 
 const [authType, setauthType] = useState(false)
 
@@ -36,4 +36,4 @@ const [authType, setauthType] = useState(false)
   );
 };
 
-export default page;
+export default Page;

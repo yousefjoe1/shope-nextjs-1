@@ -16,7 +16,7 @@ export async function login(data:Inputs) {
     console.log("🚀 ~ login ~ response:", response.data)
     return response.data; // Return the fetched data
 
-  } catch (err:any) {
+  } catch (err:unknown) {
     console.log("🚀 ~ getCart ~ err:", err)
     // console.error('Error fetching data:', err.response?.status);
     return {err}
