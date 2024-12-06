@@ -6,7 +6,6 @@ import { Inputs } from '../_types/User';
 
 
 export async function login(data:Inputs) {
-  console.log("🚀 ~ ~ data:", data)
   const url = process.env.NEXT_PUBLIC_DB
 
   try {
