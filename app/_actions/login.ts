@@ -4,10 +4,10 @@ import { cookies } from 'next/headers';
 import { Inputs } from '../_types/User';
 
 
-let url = process.env.NEXT_PUBLIC_DB
 
 export async function login(data:Inputs) {
-console.log("🚀 ~ ~ data:", data)
+  console.log("🚀 ~ ~ data:", data)
+  const url = process.env.NEXT_PUBLIC_DB
 
   try {
     const response = await axios.post(`${url}/api/users/login`,data); // Replace with your actual endpoint

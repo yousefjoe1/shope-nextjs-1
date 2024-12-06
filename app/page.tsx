@@ -10,8 +10,8 @@ export default function Home() {
       <AosAnimations />
         <Hero />
 
-        <ProductsSection title='New Arrival' link="new-arrival" api="products?extraQuery=new-arrivals&count=4"/>
-        <ProductsSection title='Most Viewd' link="most-viewd" api="products?count=4"/>
+        <ProductsSection title='New Arrival'  api="products?extraQuery=new-arrivals&count=4"/>
+        <ProductsSection title='Most Viewd' api="products?count=4"/>
 
     </section>
   );

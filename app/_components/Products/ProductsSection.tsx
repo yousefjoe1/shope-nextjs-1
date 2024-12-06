@@ -4,11 +4,9 @@ import { ProductItem } from "@/app/_types/Products";
 
 const ProductsSection = async ({
   title,
-  link,
   api = "products",
 }: {
   title: string;
-  link: string;
   api?: string;
 }) => {
   const getCartData = await getData(api);

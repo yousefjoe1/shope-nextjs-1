@@ -4,9 +4,9 @@ import { cookies } from 'next/headers';
 import { Inputs } from '../_types/User';
 
 
-let url = process.env.NEXT_PUBLIC_DB
 
 export async function registerUser(data:Inputs) {
+  const url = process.env.NEXT_PUBLIC_DB
 
   try {
     const response = await axios.post(`${url}/api/users/register`,data); // Replace with your actual endpoint
@@ -25,7 +25,7 @@ export async function registerUser(data:Inputs) {
 
     }
 
-  } catch (err:any) {
+  } catch (err:unknown) {
     console.log("🚀 ~ registerUser ~ err:", err)
     // console.error('Error fetching data:', err.response?.status);
     return {err}
