@@ -9,7 +9,6 @@ import { isAuth } from "@/app/_actions/isAuth";
 const Nav = async () => {
   const getCartData = await getData("cart");
   const isauth = await isAuth();
-  console.log("🚀 ~ Nav ~ isauth:", isauth);
   console.log("🚀 ~ Nav ~ getCartData:", getCartData);
   return (
     <>
@@ -47,8 +46,8 @@ const Nav = async () => {
                 className="p-2 relative hover:text-indigo-600 transition duration-150 ease-in-out"
               >
                 <ShoppingCart className="h-6 w-6" />
-                <span className="absolute top-0 -left-3 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
-                  {getCartData.stauts == "error" ? (
+                <span className="absolute top-1 -left-3 inline-flex items-center justify-center h-5 w-5 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-green-500 rounded-full">
+                  {getCartData.status == "error" ? (
                     0
                   ) : (
                     <>{getCartData?.data?.length}</>

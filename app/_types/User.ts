@@ -1,7 +1,8 @@
 
 export type Inputs = {
-    name: string;
+    username: string;
     email: string;
     password: string;
-    phone: string
+    phone?: string;
+    role?:string
   };

@@ -7,9 +7,13 @@ import {
   DropdownItem,
 } from "@nextui-org/react";
 import { User } from "lucide-react";
+import { logout } from "../_actions/logout";
 
 const Profile = () => {
 
+  const logoutFunc = () => {
+    logout()
+  }
 
   return (
     <div>
@@ -18,7 +22,7 @@ const Profile = () => {
           <User className="h-8 w-8 text-gray-600"/>
         </DropdownTrigger>
         <DropdownMenu aria-label="Static Actions">
-          <DropdownItem key="new">New file</DropdownItem>
+          <DropdownItem onClick={logoutFunc} key="new">Logout</DropdownItem>
           <DropdownItem key="copy">Copy link</DropdownItem>
         </DropdownMenu>
       </Dropdown>
