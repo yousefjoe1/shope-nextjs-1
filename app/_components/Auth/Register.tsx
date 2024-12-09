@@ -33,7 +33,6 @@ const Register = () => {
     setIsSubmit(true);
     try {
         const resp = await registerUser(userdata);
-        console.log("🚀 ~ constonSubmit:SubmitHandler<Inputs>= ~ resp:", resp)
         if(resp.code == 201){
             if(resp.data.role == 'user'){
                 router.push('/')
@@ -45,30 +44,15 @@ const Register = () => {
             setError(resp.msg);
         }
     } catch (er: unknown) {
-        console.log("🚀 ~ constonSubmit:SubmitHandler<Inputs>= ~ er:", er)
         if (er instanceof Error) {
-            // Standard Error properties
             console.error(er.message);
             setError(er.message);
           } else if (typeof er === 'object' && er !== null && 'msg' in er) {
-            // Custom error type checking
-            // setError(er.msg);
+
           } else {
-            // Fallback for unknown error types
             setError('An unexpected error occurred');
           }
-            // setError(er.msg);
-
     }
-    // if (resp.data.code == 400) {
-    // } else {
-    //   if (resp.data.data.role == "vendor") {
-    //     // Todo: make the vendor go to his dashboard
-    // } else {
-    //     // Todo: make the user go to home
-
-    //   }
-    // }
     setIsSubmit(false);
   };
 

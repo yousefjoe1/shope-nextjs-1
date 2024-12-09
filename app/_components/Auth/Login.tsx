@@ -35,7 +35,6 @@ const Login = () => {
 
   return (
     <>
-      {/* <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-2xl"> */}
         <p className="text-center text-sm text-gray-600">
           Sign in to access your account
         </p>
@@ -83,7 +82,6 @@ const Login = () => {
             {isSubmit && <Spinner size="sm" color="warning" />}
           </div>
         </form>
-      {/* </div> */}
     </>
   );
 };
